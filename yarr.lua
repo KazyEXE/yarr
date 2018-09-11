@@ -34,10 +34,10 @@ text_box = texts.new(settings.display, settings)
 -- Constructor
 
 initialize = function(text, settings)
-    local properties = L{}
-    properties:append('${pirates}')
+	local properties = L{}
+	properties:append('${pirates}')
 	text:clear()
-    text:append(properties:concat('\n'))
+	text:append(properties:concat('\n'))
 end
 
 text_box:register_event('reload', initialize)
@@ -48,7 +48,7 @@ windower.register_event('zone change', 'load', function()
     local remove = S{}
 
 	local zone = windower.ffxi.get_info().zone
-        local info = {}
+	local info = {}
 	local pirates = ""
 	info.zone = zone
 	info.pirates = ""
