@@ -47,31 +47,29 @@ text_box:register_event('reload', initialize)
 windower.register_event('zone change', 'load', function()
     local remove = S{}
 
-
-		local zone = windower.ffxi.get_info().zone
+	local zone = windower.ffxi.get_info().zone
         local info = {}
-		local pirates = "test"
-		info.zone = zone
-		info.pirates = "test"
+	local pirates = ""
+	info.zone = zone
+	info.pirates = ""
 		
-		if zone == 220 or zone == 221 then
-			info.pirates = 'No pirates'
-       			text_box:show()
-			text_box:update(info)
-		elseif zone == 227 or zone == 228 then
-		
-			info.pirates = "Pirates!!"
-       			text_box:show()
+	if zone == 220 or zone == 221 then
+		info.pirates = 'No pirates'
+		text_box:show()
 		text_box:update(info)
-		elseif zone == 252 then
-			info.pirates = "Deep in the pirates' cove!"
-			text_box:show()
-			text_box:update(info)
-		else
+	elseif zone == 227 or zone == 228 then
+		info.pirates = "Pirates!!"
+		text_box:show()
+		text_box:update(info)
+	elseif zone == 252 then
+		info.pirates = "Deep in the pirates' cove!"
+		text_box:show()
+		text_box:update(info)
+	else
 		info.pirates = "Not in Pirate Territory!"
-			text_box:hide()
-			text_box:update(info)
-		end
+		text_box:hide()
+		text_box:update(info)
+	end
 
 
 end)
