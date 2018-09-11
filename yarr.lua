@@ -12,7 +12,7 @@ defaults = {}
 defaults.display = {}
 defaults.display.pos = {}
 defaults.display.pos.x = 1500
-defaults.display.pos.y = 20
+defaults.display.pos.y = 0
 defaults.display.bg = {}
 defaults.display.bg.red = 0
 defaults.display.bg.green = 0
@@ -24,7 +24,7 @@ defaults.display.text.red = 255
 defaults.display.text.green = 255
 defaults.display.text.blue = 255
 defaults.display.text.alpha = 255
-defaults.display.text.size = 12
+defaults.display.text.size = 10
 
 settings = config.load(defaults)
 settings:save()
