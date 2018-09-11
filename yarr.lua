@@ -44,7 +44,7 @@ text_box:register_event('reload', initialize)
 
 -- Events
 
-windower.register_event('prerender', function()
+windower.register_event('zone change', 'load', function()
     local remove = S{}
 
 
@@ -55,21 +55,22 @@ windower.register_event('prerender', function()
 		info.pirates = "test"
 		
 		if zone == 220 or zone == 221 then
-		info.pirates = 'No pirates'
-        text_box:show()
-		text_box:update(info)
+			info.pirates = 'No pirates'
+       			text_box:show()
+			text_box:update(info)
 		elseif zone == 227 or zone == 228 then
-		info.pirates = "Pirates!!"
-        text_box:show()
+		
+			info.pirates = "Pirates!!"
+       			text_box:show()
 		text_box:update(info)
 		elseif zone == 252 then
-		info.pirates = "Deep in the pirates' cove!"
-		text_box:show()
-		text_box:update(info)
+			info.pirates = "Deep in the pirates' cove!"
+			text_box:show()
+			text_box:update(info)
 		else
 		info.pirates = "Not in Pirate Territory!"
-		text_box:hide()
-		text_box:update(info)
+			text_box:hide()
+			text_box:update(info)
 		end
 
 
